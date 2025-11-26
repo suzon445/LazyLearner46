@@ -11,18 +11,25 @@ int32_t main() {
   while(t--){
     int n; 
     cin >> n;
-    int a[n];
+    priority_queue<int> mx;
     for(int i = 0; i < n; i++){
-        a[i] = i + 1;
+      mx.push(i + 1);
     }
+    vector<pair<int,int>> ans;
+    for(int i = 0; i + 1 < n; i++){
+      int f = mx.top();
+      mx.pop();
+      int s = mx.top();
+      mx.pop();
+      ans.push_back({f,s});
+      mx.push((f + s + 1) / 2);
+    }
+    cout << mx.top() << endl;
+    for(auto x : ans){
+      cout << x.first <<' ' << x.second << endl;
+    }
+    cout << endl;
 
-    cout << 2 << endl;
-    int i = n - 1;
-    while(i > 0){
-        cout << a[i] << ' ' << a[i - 1] << endl;
-        a[i - 1] = round((a[i] + a[i - 1]) / 2);
-        i--;
-    }
     
     
   }

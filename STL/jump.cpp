@@ -3,15 +3,6 @@ using namespace std;
 
 #define ll long long
 #define mod 1000000007
-int x;
-
-int jump(int i, int pos){
-  if(pos == x) return 1;
-  if(pos > x) return 0;
-  cout << pos << endl;
-  return min(jump(i + 1, pos + i),jump(i + 1, pos - 1));
-
-}
 
 int32_t main() {
   ios_base::sync_with_stdio(0);
@@ -19,8 +10,16 @@ int32_t main() {
   
   int t; cin >> t;
   while(t--){
+     int x;
      cin >> x;
-     cout << jump(1,0) << endl;
+     int i = 0;
+     while(i * ( i + 1) < 2 * x){
+      i++;
+     }
+     if(i * ( i + 1) / 2 == x + 1){
+      i++;
+     }
+     cout << i << endl;
     
   }
   return 0;

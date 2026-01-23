@@ -1,0 +1,1 @@
+{"name":"Local: 1st","url":"d:\\DS and algo\\LazyLearner46\\DAY-08(until pupil)\\1st.cpp","tests":[{"id":1767969447190,"input":"1\n10 2 3 4","output":"4"},{"id":1767969515927,"input":"1\n10 2 2 4","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DS and algo\\LazyLearner46\\DAY-08(until pupil)\\1st.cpp","group":"local","local":true}
